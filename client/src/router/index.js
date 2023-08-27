@@ -4,6 +4,7 @@ import ExploreLayout from "../layouts/ExploreLayout.vue"
 
 import RegisterView from "../views/Landing/RegisterView.vue"
 import LoginView from "../views/Landing/LoginView.vue"
+import IndexView from "../views/Landing/IndexView.vue"
 
 const routes = [
   {
@@ -11,6 +12,11 @@ const routes = [
     name: 'home',
     component: LandingLayout,
     children:[
+      {
+        path: "",
+        name: "Index",
+        component: IndexView
+      },
       {
         path: "register",
         name: "Register",

@@ -1,9 +1,5 @@
 <template>
   <div>
-    <nav>
-      <router-link to="/login" class="text-4xl mr-2">Login</router-link>
-      <router-link to="/register">Register</router-link>
-    </nav>
     <router-view />
   </div>
 </template>
@@ -14,6 +10,8 @@ export default {
 }
 </script>
 
-<style>
-  
+<style scoped>
+  nav{
+    margin: 0 55px;
+  }
 </style>
