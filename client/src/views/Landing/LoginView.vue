@@ -38,7 +38,7 @@
             </div>
 
             <p v-for="error of v$.$errors" :key="error.$uid">
-              <small v-if="error.$property=='username'">{{ error.$message }}</small>
+              <small class="text-xs text-red-500" v-if="error.$property=='username'">{{ error.$message }}</small>
             </p>
             
             <div class="relative text-gray-600 focus-within:text-gray-400">
@@ -64,7 +64,7 @@
             </div>
 
             <p v-for="error of v$.$errors" :key="error.$uid">
-              <small v-if="error.$property=='password'">{{ error.$message }}</small>
+              <small class="text-xs text-red-500" v-if="error.$property=='password'">{{ error.$message }}</small>
             </p>
 
             <p class="text-xs text-sky-500 text-right">Forget password?</p>
