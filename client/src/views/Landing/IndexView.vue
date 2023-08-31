@@ -2,6 +2,7 @@
   <div class="grid gap-8 bg-slate-100 md:grid-cols-2 md:items-center w-full p-5 overflow-auto max-h-screen ">
     <div class=" bg-white text-center p-8 rounded-md drop-shadow-2xl">
         <h1 class="text-3xl mb-2 text-sky-500">ระบบอะไรสักอย่าง</h1>
+        <button @click="setCount()">Increment Count {{ count }}</button>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam nisi consequatur perferendis minus, nihil tempore excepturi voluptas deserunt debitis pariatur aut. Alias excepturi nemo assumenda? Odio rerum minima sunt nobis?</p>
         <nav class="mt-8">
           <router-link to="/register" class="bg-slate-300 shadow-slate-600 shadow-md hover:bg-sky-500 mx-3 my-4 px-3 py-1 rounded-md hover:text-slate-200">สมัครสมาชิก</router-link>
@@ -22,8 +23,21 @@
 </template>
 
 <script>
-export default {
 
+export default {
+  data(){
+    return {};
+  },
+  computed:{
+    count(){
+      return this.$store.state.count
+    }
+  },
+  methods:{
+    setCount(){
+      this.$store.commit("setCount",5)
+    }
+  }
 }
 </script>
 
